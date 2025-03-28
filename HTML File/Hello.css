@@ -1,0 +1,294 @@
+
+/* testfile.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    background: white;
+}
+
+.logo img {
+    width: 120px;
+    height: auto;
+}
+
+nav {
+    background: orange;
+    padding: 10px;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-around;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li {
+    color: white;
+    cursor: pointer;
+    padding: 10px;
+}
+
+.trending {
+    padding: 20px;
+}
+
+.align {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.search-btn {
+    display: flex;
+    align-items: center;
+    background: orange;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.input {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 200px;
+}
+
+.products {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.product {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    width: 23%;
+    box-sizing: border-box;
+}
+
+.cart-btn {
+    display: flex;
+    align-items: center;
+    background: green;
+    color: white;
+    border: none;
+    padding: 10px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+
+    height: 40px;
+}
+
+.fa-cart-shopping {
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.account-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    border: none;
+    background: none;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.fa-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 25px;
+    height: 25px;
+    background-color: lightgrey;
+    color: orange;
+    border-radius: 50%;
+    text-align: center;
+    font-size: 14px;
+    padding: 5px;
+}
+
+
+.products img {
+    width: auto;  /* Maintains aspect ratio */
+    height: 200px; /* Set a fixed height for all images */
+    object-fit: cover; /* Ensures images fill the area properly without distortion */
+    border-radius: 10px; /* Optional: Adds rounded corners */
+}
+.trending-pro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.trend-view {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.view-all {
+    background-color: darkblue;
+    color: white;
+    border-radius: 5px;
+    height: 35px;
+    padding: 5px 15px;
+    border: none;
+    cursor: pointer;
+}
+
+.prev-next {
+    display: flex;
+    gap: 10px;
+}
+
+.fas {
+    font-size: 18px;
+    cursor: pointer;
+    background: navy;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 5px;
+}
+
+.price {
+    font-size: 20px;
+    font-weight: bold;
+    color: orange;
+}
+
+span {
+    text-decoration: line-through;
+    color: black !important;
+
+}
+
+.cost {
+    color: navy;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.p1 {
+    position: relative;
+    display: inline-block;
+}
+
+.p1 img {
+    width: 100%;
+
+}
+
+.p1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    /* Black shading on the image */
+    pointer-events: none;
+    /* Allows interactions with the image */
+}
+
+.p1 .buttons {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.p1 .buttons button {
+    background: #ff9800;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    font-size: 14px;
+    border-radius: 5px;
+    font-weight: bold;
+}
+
+.p1 .buttons button:hover {
+    background: #e68900;
+}
+
+.add-to-cart {
+    background-color: navy !important;
+
+}
+
+@media (max-width: 1024px) {
+    .products {
+        justify-content: center;
+    }
+
+    .product {
+        width: 45%;
+        margin: 5px;
+    }
+
+    .logo img {
+        width: 100px;
+    }
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .products {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+    }
+
+    .logo img {
+        width: 80px;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product {
+        width: 100%;
+    }
+
+    .logo img {
+        width: 70px;
+    }
+}
